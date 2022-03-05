@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "bZ8LiCUDDEGVf2ckgv8dIk7QGC6kDoJphIKXvsYqIgW9KEOt1lVa+HN5ddokIQzcESfDiRx5dXcFdMt3rHGe9Q==",
+  "success": true,
+  "projectFilePath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Developer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Developer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Developer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Developer\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Developer\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

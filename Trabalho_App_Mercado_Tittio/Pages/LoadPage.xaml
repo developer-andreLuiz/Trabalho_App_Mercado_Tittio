@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio.Pages.LoadPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <!--Imagem de Fundo com Ajuste de Tamanhos-->
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="BackgroundLoad" Aspect="AspectFill"/>
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0, 0.8, 0.29" Source="Logo" />
+
+
+            <!--Construção de ela-->
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
