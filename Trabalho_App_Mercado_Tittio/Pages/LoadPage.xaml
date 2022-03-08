@@ -9,8 +9,14 @@
             <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0, 0.8, 0.29" Source="Logo" />
 
 
-            <!--Construção de ela-->
+            <!--Construção de Tela-->
             <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                <Button x:Name="btnTeste1" Text="Cadastrar" Clicked="btnTeste1_Clicked" VerticalOptions="CenterAndExpand" HeightRequest="150" BackgroundColor="White" FontSize="50"/>
+                <Button x:Name="btnTeste2" Text="Buscar" Clicked="btnTeste2_Clicked" VerticalOptions="CenterAndExpand" HeightRequest="150" BackgroundColor="White" FontSize="50"/>
+                <Button x:Name="btnTeste3" Text="Limpar" Clicked="btnTeste3_Clicked" VerticalOptions="CenterAndExpand" HeightRequest="150" BackgroundColor="White" FontSize="50"/>
+
+
+
 
 
 

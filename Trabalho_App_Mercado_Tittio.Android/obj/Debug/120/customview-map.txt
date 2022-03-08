@@ -1,7 +1,5 @@
 @string/appbar_scrolling_view_behavior;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\layout\rootlayout.xml
-adaptive-icon;obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
 adaptive-icon;obj\Debug\120\res\mipmap-anydpi-v26\icon_.xml
-adaptive-icon;obj\Debug\120\res\mipmap-anydpi-v26\icon_round.xml
 alpha;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\anim\enterfromleft.xml
 alpha;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\anim\exittoleft.xml
 androidx.appcompat.widget.Toolbar;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\layout\fallbacktoolbardonotuse.xml
@@ -11,9 +9,7 @@ androidx.appcompat.widget.Toolbar;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_Ap
 androidx.coordinatorlayout.widget.CoordinatorLayout;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\layout\rootlayout.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\layout\shellcontent.xml
 attr;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\values\attrs.xml
-background;obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\120\res\mipmap-anydpi-v26\icon_.xml
-background;obj\Debug\120\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\53\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\120\res\values\colors.xml
 com.google.android.material.appbar.AppBarLayout;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\layout\flyoutcontent.xml
@@ -26,9 +22,7 @@ com.google.android.material.tabs.TabLayout;D:\Git\Trabalho_App_Mercado_Tittio\Tr
 declare-styleable;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\values\attrs.xml
 external-cache-path;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\53\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\53\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-foreground;obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\120\res\mipmap-anydpi-v26\icon_.xml
-foreground;obj\Debug\120\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\layout\bottomtablayout.xml
 item;D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\lp\54\jl\res\values\styles.xml
 item;obj\Debug\120\res\values\styles.xml

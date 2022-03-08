@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d911bfc4-1393-4b4e-a5b5-9ced62b2bf6d": {
+      "ProjectGuid": "d911bfc4-1393-4b4e-a5b5-9ced62b2bf6d",
+      "DisplayName": "Trabalho_App_Mercado_Tittio",
+      "ColorIndex": 0
+    },
+    "8b050395-ae1d-44a8-9fae-a96d928b5d06": {
+      "ProjectGuid": "8b050395-ae1d-44a8-9fae-a96d928b5d06",
+      "DisplayName": "Trabalho_App_Mercado_Tittio.Android",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}
