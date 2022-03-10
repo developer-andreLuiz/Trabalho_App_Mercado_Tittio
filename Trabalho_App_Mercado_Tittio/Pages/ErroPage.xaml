@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio.Pages.ErroPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="lblStatus" HorizontalTextAlignment="Center" VerticalOptions="End" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+            <Button x:Name="btnTentarNovamente" Clicked="btnTentarNovamente_Clicked" Grid.Row="1" Text="Tentar Novamente" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
+        </Grid>
+       
+    </ContentPage.Content>
+</ContentPage>

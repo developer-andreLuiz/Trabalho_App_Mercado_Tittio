@@ -8,10 +8,12 @@ namespace Trabalho_App_Mercado_Tittio.Helpers
 {
     public static class DeviceHelper
     {
-        public static string DeviceID()
+        public static string DeviceID { get; private set; }
+        public static void GetDeviceID()
         {
+            DeviceID = String.Empty;
             IDeviceInfo device = DependencyService.Get<IDeviceInfo>();
-            return device.GetDeviceID();
+            DeviceID = device.GetDeviceID();
           
         }
     }

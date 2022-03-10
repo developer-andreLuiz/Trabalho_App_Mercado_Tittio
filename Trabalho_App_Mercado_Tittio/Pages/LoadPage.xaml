@@ -3,34 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Trabalho_App_Mercado_Tittio.Pages.LoadPage">
     <ContentPage.Content>
-        <AbsoluteLayout>
+        <AbsoluteLayout BackgroundColor="Black">
             <!--Imagem de Fundo com Ajuste de Tamanhos-->
-            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="BackgroundLoad" Aspect="AspectFill"/>
-            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0, 0.8, 0.29" Source="Logo" />
-
-
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="BackgroundLoad" Aspect="AspectFill" Opacity="1"/>
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0, 0.8, 0.29" Source="Logo"/>
             <!--Construção de Tela-->
-            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
-                <Button x:Name="btnTeste1" Text="Cadastrar" Clicked="btnTeste1_Clicked" VerticalOptions="CenterAndExpand" HeightRequest="150" BackgroundColor="White" FontSize="50"/>
-                <Button x:Name="btnTeste2" Text="Buscar" Clicked="btnTeste2_Clicked" VerticalOptions="CenterAndExpand" HeightRequest="150" BackgroundColor="White" FontSize="50"/>
-                <Button x:Name="btnTeste3" Text="Limpar" Clicked="btnTeste3_Clicked" VerticalOptions="CenterAndExpand" HeightRequest="150" BackgroundColor="White" FontSize="50"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </StackLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="17*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Label x:Name="lblStatus" Text="Status" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold"  BackgroundColor="Black" TextColor="White" VerticalOptions="End" />
+                </Grid>
+               
+                <Frame Grid.Row="1" Grid.Column="1" CornerRadius="50" BackgroundColor="Black" Padding="0">
+                    <ProgressBar x:Name="Barra" ProgressColor="#FED436" Progress="0" Margin="0"  ScaleY="10" />
+                </Frame>
+                <Label x:Name="lblPorcentagem" Grid.Row="1" Grid.Column="1" Text="0%" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"  TextColor="White"  />
+                <Label Grid.Row="2" Grid.Column="1" Text="Carregando" HorizontalOptions="Center" FontAttributes="Bold"  TextColor="White"  />
+            </Grid>
+          
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

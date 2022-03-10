@@ -9,8 +9,6 @@ namespace Trabalho_App_Mercado_Tittio.Helpers
     public static class ClienteHelper
     {
         public static ClienteHelperModel Cliente { get; private set; }
-        
-
         public static async Task<bool> GetLogin()
         {
             Cliente = new ClienteHelperModel();
@@ -26,6 +24,7 @@ namespace Trabalho_App_Mercado_Tittio.Helpers
         }
         public static async Task<bool> SetLogin(int Id , string Nome)
         {
+            LimparDados();
             if (Id > 0 && Nome.Length > 0)
             {
                 Cliente.Id = Id;
@@ -39,19 +38,8 @@ namespace Trabalho_App_Mercado_Tittio.Helpers
         }
         public static void LimparDados()
         {
+            Cliente = new ClienteHelperModel();
             Xamarin.Essentials.SecureStorage.RemoveAll();
         }
-
-        /*
-            set
-            await Xamarin.Essentials.SecureStorage.SetAsync("email", "developer.andreluiz@gmail.com");
-            await Xamarin.Essentials.SecureStorage.SetAsync("password", "J@va0007");
-         
-            get
-            email = await Xamarin.Essentials.SecureStorage.GetAsync("email");
-            password = await Xamarin.Essentials.SecureStorage.GetAsync("password");
-
-            Xamarin.Essentials.SecureStorage.RemoveAll();
-         */
     }
 }

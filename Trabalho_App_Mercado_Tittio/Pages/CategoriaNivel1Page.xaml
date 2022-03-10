@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio.Pages.CategoriaNivel1Page">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" x:Name="lblStatus" Text="Categoria Nivel 1" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+            <Entry Grid.Row="1" x:Name="entryNome" Placeholder="Digite o nome" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" FontAttributes="Bold" TextColor="Black" />
+
+            <StackLayout Grid.Row="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+
+                <Button x:Name="btnEvento"      Clicked="btnEvento_Clicked"       Text="Evento"        BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
+                <Button x:Name="btnExibirDados" Clicked="btnExibirDados_Clicked"  Text="Exibir Dados"  BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
+                <Button x:Name="btnLimparDados" Clicked="btnLimparDados_Clicked"  Text="Limpar Dados"  BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

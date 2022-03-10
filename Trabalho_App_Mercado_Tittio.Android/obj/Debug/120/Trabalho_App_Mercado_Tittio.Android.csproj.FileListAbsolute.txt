@@ -634,3 +634,4 @@ D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon__adaptive_back.png
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon__adaptive_fore.png
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\backgroundload.jpg
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\android\assets\Newtonsoft.Json.dll

@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "Trabalho_App_Mercado_Tittio.Android.dll" comes first in this list. */
 		"Trabalho_App_Mercado_Tittio.Android.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"Trabalho_App_Mercado_Tittio.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",

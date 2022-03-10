@@ -7,5 +7,6 @@ namespace Trabalho_App_Mercado_Tittio.Interfaces
     public interface IDeviceInfo
     {
         string GetDeviceID();
+        
     }
 }
