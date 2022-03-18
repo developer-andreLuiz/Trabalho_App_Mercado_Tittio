@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio.Pages.ProfilePage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <!--Barra de Cima-->
+            <Grid Grid.Row="0" BackgroundColor="#f3a925">
+                <Frame BackgroundColor="Transparent" HasShadow="True">
+                    <Label Text="Dados Pessoais" FontAttributes="Bold" TextColor="Black" FontSize="Body" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Frame>
+            </Grid>
+
+            <!--Conteudo da Pagina-->
+            <Grid Grid.Row="1" BackgroundColor="White">
+                <StackLayout>
+                    <Label Text="Cep" HorizontalOptions="Center"/>
+                    <Entry x:Name="entryTest" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+                    <Button x:Name="btnTest" Text="Teste" Clicked="Test_Clicked"/>
+                    <Label x:Name="lblReturn" HorizontalOptions="Center" />
+                </StackLayout>
+            </Grid>
+           
+
+
+
+        </Grid>
+   </ContentPage.Content>
+</ContentPage>

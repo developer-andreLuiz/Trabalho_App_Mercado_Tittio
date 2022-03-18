@@ -5,20 +5,48 @@
     <ContentPage.Content>
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="25*"/>
-                <RowDefinition Height="25*"/>
-                <RowDefinition Height="50*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
             </Grid.RowDefinitions>
             
-            <Label Grid.Row="0" x:Name="lblStatus" Text="Categoria Nivel 1" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
-            <Entry Grid.Row="1" x:Name="entryNome" Placeholder="Digite o nome" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" FontAttributes="Bold" TextColor="Black" />
+            <Grid Grid.Row="0" BackgroundColor="#f3a925" Padding="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                   
+                    <RowDefinition Height="100*"/>
+                   
+                </Grid.RowDefinitions>
 
-            <StackLayout Grid.Row="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <Frame Grid.Column="0" Grid.Row="0" CornerRadius="20" BackgroundColor="Transparent" Padding="10" Margin="3" BorderColor="Black" Opacity="1">
+                    <ImageButton x:Name="btnImgHome" BackgroundColor="Transparent" Source="home" Margin="10" Clicked="btnImgHome_Clicked"/>
+                </Frame>
 
-                <Button x:Name="btnEvento"      Clicked="btnEvento_Clicked"       Text="Evento"        BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
-                <Button x:Name="btnExibirDados" Clicked="btnExibirDados_Clicked"  Text="Exibir Dados"  BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
-                <Button x:Name="btnLimparDados" Clicked="btnLimparDados_Clicked"  Text="Limpar Dados"  BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
-            </StackLayout>
+                <Frame Grid.Column="1" Grid.Row="0" CornerRadius="20" BackgroundColor="Transparent" Padding="10" Margin="3" BorderColor="Black" Opacity="1">
+                    <ImageButton x:Name="btnImgSearch" BackgroundColor="Transparent" Source="search" Margin="10" Clicked="btnImgSearch_Clicked"/>
+                </Frame>
+
+                <Frame Grid.Column="2" Grid.Row="0" CornerRadius="20" BackgroundColor="Transparent" Padding="10" Margin="3" BorderColor="Black" Opacity="1">
+                    <ImageButton x:Name="btnImgCart" BackgroundColor="Transparent" Source="cart" Margin="10" Clicked="btnImgCart_Clicked"/>
+                </Frame>
+             
+                <Frame Grid.Column="3" Grid.Row="0" CornerRadius="20" BackgroundColor="Transparent" Padding="10" Margin="3" BorderColor="Black" Opacity="1">
+                    <ImageButton x:Name="btnImgProfile" BackgroundColor="Transparent" Source="profile" Margin="10" Clicked="btnImgProfile_Clicked"/>
+                </Frame>
+               
+                <Frame Grid.Column="4" Grid.Row="0" CornerRadius="20" BackgroundColor="Transparent" Padding="10" Margin="3" BorderColor="Black" Opacity="1">
+                    <ImageButton x:Name="btnImgConfig" BackgroundColor="Transparent" Source="config" Margin="10" Clicked="btnImgConfig_Clicked"/>
+                </Frame>
+
+            </Grid>
+           
+            
             
         </Grid>
     </ContentPage.Content>

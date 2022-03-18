@@ -16,3 +16,5 @@ D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio\obj\Debug\netstan
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio\obj\Debug\netstandard2.0\Pages\CategoriaNivel1Page.xaml.g.cs
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio\obj\Debug\netstandard2.0\Pages\TestePage.xaml.g.cs
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio\obj\Debug\netstandard2.0\Pages\ErroPage.xaml.g.cs
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio\obj\Debug\netstandard2.0\Pages\ProfilePage.xaml.g.cs
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio\obj\Debug\netstandard2.0\Pages\CheckSmsPage.xaml.g.cs

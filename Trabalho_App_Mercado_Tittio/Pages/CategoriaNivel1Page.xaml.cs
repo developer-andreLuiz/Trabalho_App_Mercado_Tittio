@@ -14,43 +14,62 @@ namespace Trabalho_App_Mercado_Tittio.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CategoriaNivel1Page : ContentPage
     {
+        #region Variables
+        #endregion
+
+        #region Functions
+        private void PushAsyncWithoutDuplicate(Page page)
+        {
+            if (Navigation.NavigationStack[Navigation.NavigationStack.Count - 1].GetType() != page.GetType())
+            {
+                Navigation.PushAsync(page);
+            }
+        }
+        #endregion
+
+        #region Events
         public CategoriaNivel1Page()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-        }
-        private async void btnEvento_Clicked(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(entryNome.Text))
+            if (GlobalHelper.instancia.Cliente.id > 0)
             {
-                string nome = entryNome.Text.ToUpper();
-                ClienteHelper.SetLogin(1, nome);
-                ClienteService clienteService = new ClienteService();
-                GlobalHelper.instancia.Cliente = await clienteService.Get(1);
-                GlobalHelper.instancia.Cliente.nome = nome;
-                GlobalHelper.instancia.Cliente.aparelhoId = DeviceHelper.DeviceID;
-                await clienteService.Update(GlobalHelper.instancia.Cliente);
-                entryNome.Text = string.Empty;
-                await DisplayAlert("Alerta", "Dados Inseridos", "OK");
+                ImageSource image = ImageSource.FromUri(new Uri($"https://mercadoonline.blob.core.windows.net/cliente/{GlobalHelper.instancia.Cliente.id}.jpg"));
+                btnImgProfile.Source = image;
+            }
+        }
+
+        private void btnImgHome_Clicked(object sender, EventArgs e)
+        {
+
+        }
+        private void btnImgSearch_Clicked(object sender, EventArgs e)
+        {
+
+        }
+        private void btnImgProfile_Clicked(object sender, EventArgs e)
+        {
+            if (GlobalHelper.instancia.Cliente.id > 0)
+            {
+                PushAsyncWithoutDuplicate(new ProfilePage());
             }
             else
             {
-                await DisplayAlert("Alerta", "Digite um Nome", "OK");
+                PushAsyncWithoutDuplicate(new CheckSmsPage());
             }
         }
-        private async void btnExibirDados_Clicked(object sender, EventArgs e)
+       
+        private void btnImgConfig_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alerta", GlobalHelper.instancia.Cliente.nome, "OK");
+            PushAsyncWithoutDuplicate(new ProfilePage());
         }
-        private async void btnLimparDados_Clicked(object sender, EventArgs e)
+        private void btnImgCart_Clicked(object sender, EventArgs e)
         {
-            GlobalHelper.instancia.Cliente = new ClienteServiceModel();
-            ClienteHelper.LimparDados();
-            await DisplayAlert("Alerta", "Dados Limpos", "OK");
+
         }
 
-       
+        #endregion
 
-       
+        
     }
 }

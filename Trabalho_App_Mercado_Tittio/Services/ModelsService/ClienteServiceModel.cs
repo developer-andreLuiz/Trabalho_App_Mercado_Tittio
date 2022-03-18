@@ -7,6 +7,7 @@ namespace Trabalho_App_Mercado_Tittio.Services.ModelsService
     {
         public int id { get; set; }
         public string nome { get; set; }
+        public string img { get; set; }
         public string cpf { get; set; }
         public DateTime nascimento { get; set; }
         public string telefone { get; set; }
@@ -17,6 +18,7 @@ namespace Trabalho_App_Mercado_Tittio.Services.ModelsService
         {
             id = 0;
             nome = String.Empty;
+            img = String.Empty;
             cpf = String.Empty; 
             nascimento = new DateTime();
             telefone = String.Empty;

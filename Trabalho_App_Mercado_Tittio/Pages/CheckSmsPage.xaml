@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio.Pages.CheckSmsPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <!--Barra de Cima-->
+            <Grid Grid.Row="0" BackgroundColor="#f3a925">
+                <Frame BackgroundColor="Transparent" HasShadow="True">
+                    <Label Text="Verifique seu Número" FontAttributes="Bold" TextColor="Black" FontSize="Body" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Frame>
+            </Grid>
+
+
+            <!--Conteudo da Pagina-->
+            <Grid Grid.Row="1" BackgroundColor="White" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="70*"/>
+                </Grid.RowDefinitions>
+
+                <!--30% de cima da Pagina de conteudo-->
+                <Grid Grid.Row="0" BackgroundColor="White" Padding="50,0,50,0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Text="Digite seu Telefone" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <!--Entry Número-->
+                    <Frame Grid.Row="1" CornerRadius="10" VerticalOptions="Center" Margin="0" Padding="20,0,20,0" BorderColor="Black">
+                        <Entry x:Name="entryTelephone" Placeholder="(00)00000-0000" MaxLength="11" HorizontalTextAlignment="Center" Keyboard="Numeric" TextChanged="entryTelephone_TextChanged"/>
+                    </Frame>
+                    <!--Botão Enviar SMS-->
+                    <Frame x:Name="frmSendSMS" Grid.Row="3" BackgroundColor="#f3a925" CornerRadius="10" VerticalOptions="Center" BorderColor="Black" Padding="50,0,50,0" IsVisible="false">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="frmSendSMS_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <Grid BackgroundColor="Transparent">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20*"/>
+                                <ColumnDefinition Width="60*"/>
+                                <ColumnDefinition Width="20*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" Text="Enviar SMS" TextColor="Black" FontSize="Body" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                            <Image Grid.Column="2" Source="sms" HorizontalOptions="Start"/>
+                        </Grid>
+                    </Frame>
+                </Grid>
+
+                <!--70% de baixo da Pagina de conteudo-->
+                <Grid x:Name="gridCheckSMS" IsVisible="false" Grid.Row="1" BackgroundColor="White" Padding="50,0,50,0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label x:Name="lblTime" Grid.Row="0" Background="white" TextColor="Black" Text="00:00" FontSize="Header" HorizontalOptions="Center"/>
+                    <Label x:Name="lblTeste" Grid.Row="1" Text="Digite o Código" TextColor="Black" VerticalOptions="End" HorizontalOptions="Center"/>
+                    <!--Entry Codigo-->
+                    <Frame Grid.Row="2" CornerRadius="10" VerticalOptions="Center" Margin="0" Padding="40,0,40,0" BorderColor="Black">
+                        <Entry x:Name="entryCode" Placeholder="xxxxxxx" MaxLength="6" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+                    </Frame>
+                    <!--Botão Verifica SMS-->
+                    <Frame x:Name="frmCheckSMS" Grid.Row="4" BackgroundColor="#f3a925" CornerRadius="10" VerticalOptions="Center" BorderColor="Black" Padding="50,0,50,0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="frmCheckSMS_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <Grid BackgroundColor="Transparent">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20*"/>
+                                <ColumnDefinition Width="60*"/>
+                                <ColumnDefinition Width="20*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" Text="Verificar" TextColor="Black" FontSize="Body" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                            <Image Grid.Column="2" Source="sms" HorizontalOptions="Start"/>
+                        </Grid>
+                    </Frame>
+
+
+                </Grid>
+
+            </Grid>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

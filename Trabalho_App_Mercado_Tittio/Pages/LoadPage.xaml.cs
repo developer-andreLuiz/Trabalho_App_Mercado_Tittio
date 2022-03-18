@@ -19,7 +19,6 @@ namespace Trabalho_App_Mercado_Tittio.Pages
         float porcentagemAumento = 10;
         uint tempoAnimacao = 1000;
         
-
         ProdutoService produtoService;
         ClienteService clienteService;
         ProdutoCategoriaService produtoCategoriaService;
@@ -28,10 +27,8 @@ namespace Trabalho_App_Mercado_Tittio.Pages
         CategoriaNivel3Service categoriaNivel3Service;
         CategoriaNivel4Service categoriaNivel4Service;
        
-
         bool internet = false;
         bool internetVerificada = false;
-
         bool produtoVerificado = false;
         bool clienteVerificado = false;
         bool produtoCategoriaVerificado = false;
@@ -40,9 +37,6 @@ namespace Trabalho_App_Mercado_Tittio.Pages
         bool categoriaNivel3Verificado = false;
         bool categoriaNivel4Verificado = false;
         bool loginVerificado = false;
-
-    
-       
 
         public LoadPage()
         {
@@ -91,14 +85,11 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                     return true;
                 }
                
-                
-                
                 if (loginVerificado == false)
                 {
                     Login();
                     return true;
                 }
-
                 return true;
             }
            );
@@ -254,8 +245,5 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                 }
             }
         }
-
-      
-       
     }
 }

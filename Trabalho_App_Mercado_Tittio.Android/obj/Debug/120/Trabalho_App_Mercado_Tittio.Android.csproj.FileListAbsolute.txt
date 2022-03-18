@@ -635,3 +635,11 @@ D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon__adaptive_fore.png
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\backgroundload.jpg
 D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\android\assets\Newtonsoft.Json.dll
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\config.png
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\search.png
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\cart.png
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\home.png
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\camera.png
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\profile.png
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\res\drawable\sms.png
+D:\Git\Trabalho_App_Mercado_Tittio\Trabalho_App_Mercado_Tittio.Android\obj\Debug\120\android\src\crc64de36576e7f29db6b\SmsBroadcastReceiverHelper.java
