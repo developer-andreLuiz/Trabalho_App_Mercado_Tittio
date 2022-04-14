@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio.Pages.CategoryLevel1Page">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            
+            <!--Barra de Menu Superior com 10% da Tela-->
+            <Grid Grid.Row="0" BackgroundColor="#f3a925" Padding="3">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Frame Grid.Column="0" CornerRadius="60" BackgroundColor="Transparent" Padding="0" Margin="5" BorderColor="Black" Opacity="1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImgProfile_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Image x:Name="ImgProfile" BackgroundColor="Transparent" Source="profile" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+                
+                <Frame Grid.Column="1" CornerRadius="60" BackgroundColor="Transparent" Padding="0" Margin="5" BorderColor="Black" Opacity="1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImgHome_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Image x:Name="ImgHome" BackgroundColor="Transparent" Source="home" Margin="10"/>
+                </Frame>
+                
+                <Frame Grid.Column="2" CornerRadius="60" BackgroundColor="Transparent" Padding="0" Margin="5" BorderColor="Black" Opacity="1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImgSearch_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Image x:Name="ImgSearch" BackgroundColor="Transparent" Source="search" Margin="10"/>
+                </Frame>
+                
+                <Frame Grid.Column="3" CornerRadius="60" BackgroundColor="Transparent" Padding="0" Margin="5" BorderColor="Black" Opacity="1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImgCart_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Image x:Name="ImgCart" BackgroundColor="Transparent" Source="cart" Margin="10"/>
+                </Frame>
+                
+                <Frame Grid.Column="4" CornerRadius="60" BackgroundColor="Transparent" Padding="0" Margin="5" BorderColor="Black" Opacity="1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImgConfig_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <Image x:Name="ImgConfig" BackgroundColor="Transparent" Source="config" Margin="10"/>
+                </Frame>
+            
+            </Grid>
+        
+        
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

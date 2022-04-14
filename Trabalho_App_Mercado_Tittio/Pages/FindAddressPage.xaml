@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio.Pages.FindAddressPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <!--Barra de Cima-->
+            <Grid Grid.Row="0" BackgroundColor="#f3a925">
+                <Frame BackgroundColor="Transparent" HasShadow="True">
+                    <Label Text="Buscar Endereço" FontAttributes="Bold" TextColor="Black" FontSize="Body" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Frame>
+            </Grid>
+
+            <!--Conteudo da Pagina-->
+            <Grid Grid.Row="1" BackgroundColor="White" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                </Grid.RowDefinitions>
+
+                <!--50% de cima da Pagina de conteudo-->
+                <Grid Grid.Row="0" BackgroundColor="White" Padding="10,10,10,0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="80*"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0" CornerRadius="10" VerticalOptions="Fill" Margin="5" Padding="0" BorderColor="Black">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="80*"/>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <ImageButton Grid.Column="0" BackgroundColor="Transparent" Source="gps"/>
+                            <Entry Grid.Column="1" x:Name="entryAddress" FontSize="Small" HorizontalTextAlignment="Start" Placeholder="Digite o endereço com o número da rua" Keyboard="Text" TextColor="Black" TextChanged="entryAddress_TextChanged"/>
+                            <Frame Grid.Column="2" Padding="1" Margin="5" BackgroundColor="Transparent">
+                                <ImageButton Grid.Column="2" x:Name="btnClearAddress" BackgroundColor="Transparent" HorizontalOptions="Start" Source="close" Opacity="0.3" Clicked="btnClearAddress_Clicked"/>
+                            </Frame>
+                        </Grid>
+                    </Frame>
+                    <Label Grid.Row="1" x:Name="lblAddress" Margin="10" Text="Lista Endereços"/>
+
+
+
+
+
+
+
+
+                </Grid>
+
+                <!--50% de baixo da Pagina de conteudo-->
+                <Grid Grid.Row="1" BackgroundColor="White" Padding="50,0,50,0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                     
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="10*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="4" Text="Meu endereço não esta na lista...." HorizontalOptions="Center" VerticalOptions="End"/>
+                    <Frame Grid.Row="5" BackgroundColor="#f3a925" CornerRadius="10" VerticalOptions="Center" BorderColor="Black" Padding="50,0,50,0">
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OpenGps_Tapped"/>
+                        </Frame.GestureRecognizers>
+
+                        <Grid BackgroundColor="Transparent">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="80*"/>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" Text="Endereço pelo Mapa" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                            <Image Grid.Column="2" Source="gps" HorizontalOptions="Start"/>
+                        </Grid>
+                    </Frame>
+
+
+
+                </Grid>
+
+            </Grid>
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

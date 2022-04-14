@@ -16,15 +16,79 @@
             </Grid>
 
             <!--Conteudo da Pagina-->
-            <Grid Grid.Row="1" BackgroundColor="White">
-                <StackLayout>
-                    <Label Text="Cep" HorizontalOptions="Center"/>
-                    <Entry x:Name="entryTest" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
-                    <Button x:Name="btnTest" Text="Teste" Clicked="Test_Clicked"/>
-                    <Label x:Name="lblReturn" HorizontalOptions="Center" />
-                </StackLayout>
+            <Grid Grid.Row="1" BackgroundColor="White" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="70*"/>
+                </Grid.RowDefinitions>
+
+                <!--30% de cima da Pagina de conteudo-->
+                <Grid Grid.Row="0" BackgroundColor="White" Padding="50,0,50,0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="75*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Foto Perfil" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Frame x:Name="frmImage" Grid.Column="1" Grid.Row="1" CornerRadius="100" BackgroundColor="White"  Margin="0" BorderColor="Black" Opacity="1" Padding="0" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="frmImage_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <Image x:Name="imgProfile" Source="profile" Aspect="AspectFill"/>
+                    </Frame>
+                </Grid>
+
+                <!--70% de baixo da Pagina de conteudo-->
+                <Grid Grid.Row="1" BackgroundColor="White" Padding="50,0,50,0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Text="Nome" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <!--Entry Nome-->
+                    <Frame Grid.Row="1" CornerRadius="10" VerticalOptions="Fill" Margin="0" Padding="40,0,40,0" BorderColor="Black">
+                        <Entry x:Name="entryName" MaxLength="50" HorizontalTextAlignment="Center" Keyboard="Text" TextColor="Black"/>
+                    </Frame>
+                    
+                    <Label Grid.Row="2" Text="Telefone" TextColor="Black" VerticalOptions="End" HorizontalOptions="Start"/>
+                    <!--Label Telefone-->
+                    <Frame Grid.Row="3" CornerRadius="10" VerticalOptions="Fill" Margin="0" Padding="0,0,0,0" BorderColor="Black">
+                        <Label x:Name="lblTelephone" Text="(00)00000-0000" HorizontalTextAlignment="Center" VerticalOptions="Center" TextColor="Black"/>
+                    </Frame>
+
+                    <!--Botão Salvar-->
+                    <Frame x:Name="frmSave" Grid.Row="6" BackgroundColor="#f3a925" CornerRadius="10" VerticalOptions="Center" BorderColor="Black" Padding="50,0,50,0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="frmSave_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <Grid BackgroundColor="Transparent">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20*"/>
+                                <ColumnDefinition Width="60*"/>
+                                <ColumnDefinition Width="20*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" Text="Salvar" TextColor="Black" FontSize="Body" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                            <Image Grid.Column="2" Source="save" HorizontalOptions="Start"/>
+                        </Grid>
+                    </Frame>
+
+
+
+                </Grid>
+
             </Grid>
-           
+
 
 
 

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Trabalho_App_Mercado_Tittio.Enumerators;
+using Trabalho_App_Mercado_Tittio.Helpers;
+using Trabalho_App_Mercado_Tittio.Services.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +15,8 @@ namespace Trabalho_App_Mercado_Tittio.Pages
     public partial class ErroPage : ContentPage
     {
         StatusError statusError; 
-        public ErroPage(StatusError erro,string nome)
+        string name = string.Empty;
+        public ErroPage(StatusError erro)
         {
             InitializeComponent();
             statusError = erro;
@@ -21,39 +24,42 @@ namespace Trabalho_App_Mercado_Tittio.Pages
             if (statusError == StatusError.Internet)
             {
                 lblStatus.Text = $"Você esta sem Internet";
-                btnTentarNovamente.Text = "Tentar Novamente";
+                btnTryAgain.Text = "Tentar Novamente";
                 return;
             }
-            if (statusError == StatusError.Desabilitado)
+            if (statusError == StatusError. Disabled)
             {
-                lblStatus.Text = $"Lamentamos {nome}, sua conta esta Bloqueada {Environment.NewLine}Desconectado";
-                btnTentarNovamente.Text = "Suporte";
+                lblStatus.Text = $"Lamentamos {name}, sua conta esta Bloqueada {Environment.NewLine}Desconectado";
+                btnTryAgain.Text = "Suporte";
                 return;
             }
-            if (statusError == StatusError.Desconectado)
+            if (statusError == StatusError. Disconnect)
             {
-                lblStatus.Text = $"Lamentamos {nome}, você foi desconectado houve um login em outro Dispositivo";
-                btnTentarNovamente.Text = "Ir as Compras";
+                lblStatus.Text = $"Lamentamos {name}, você foi desconectado houve um login em outro Dispositivo";
+                btnTryAgain.Text = "Ir as Compras";
                 return;
             }
            
         }
 
-        private async void btnTentarNovamente_Clicked(object sender, EventArgs e)
+        private void btnTryAgain_Clicked(object sender, EventArgs e)
         {
-            if (statusError== StatusError.Internet)
+            if (statusError == StatusError.Internet)
             {
                 App.Current.MainPage = new LoadPage();
                 return;
             }
-            if (statusError == StatusError.Desabilitado)
+            if (statusError == StatusError.Disabled)
             {
-                await DisplayAlert("Alerta", "Abrir WhatsApp", "OK");
+                string message = $"Oi,eu sou o {GlobalHelper.instance.User.nome}, e minha conta esta Bloqueada, preciso de ajuda.";
+                DeviceHelper.OpenWhatsApp("+5521987788440", message);
                 return;
             }
-            if (statusError == StatusError.Desconectado)
+            if (statusError == StatusError.Disconnect)
             {
-                App.Current.MainPage = new NavigationPage(new CategoriaNivel1Page());
+                DeviceHelper.DataClear();
+                GlobalHelper.instance.User = new UserServiceModel();
+                App.Current.MainPage = new NavigationPage(new CategoryLevel1Page());
                 return;
             }
 

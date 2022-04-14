@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
-using Trabalho_App_Mercado_Tittio.Services.ModelsService;
+using Trabalho_App_Mercado_Tittio.Services.Models;
 
 namespace Trabalho_App_Mercado_Tittio.Services
 {
@@ -16,15 +16,14 @@ namespace Trabalho_App_Mercado_Tittio.Services
             {
                 string newURL = string.Format(URL, cep);
                 WebClient wc = new WebClient();
-                string conteudo = wc.DownloadString(newURL);
-                ViaCepServiceModel end = JsonConvert.DeserializeObject<ViaCepServiceModel>(conteudo);
+                string content = wc.DownloadString(newURL);
+                ViaCepServiceModel end = JsonConvert.DeserializeObject<ViaCepServiceModel>(content);
                 return end;
             }
             catch
             {
                 return new ViaCepServiceModel();
             }
-
         }
     }
 }

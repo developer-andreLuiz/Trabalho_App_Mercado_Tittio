@@ -2,32 +2,32 @@
 using System.Collections.Generic;
 
 using System.Text;
-using Trabalho_App_Mercado_Tittio.Services.ModelsService;
+using Trabalho_App_Mercado_Tittio.Services.Models;
 
 namespace Trabalho_App_Mercado_Tittio.Helpers
 {
     class GlobalHelper
     {
-        public static GlobalHelper instancia = new GlobalHelper();
+        public static GlobalHelper instance = new GlobalHelper();
 
-        public List<CategoriaNivel1ServiceModel> listaCategoriaNivel1 = new List<CategoriaNivel1ServiceModel>();
+        public List<CategoryLevel1ServiceModel> listCategoryLevel1 = new List<CategoryLevel1ServiceModel>();
 
-        public List<CategoriaNivel2ServiceModel> listaCategoriaNivel2 = new List<CategoriaNivel2ServiceModel>();
+        public List<CategoryLevel2ServiceModel> listCategoryLevel2 = new List<CategoryLevel2ServiceModel>();
 
-        public List<CategoriaNivel3ServiceModel> listaCategoriaNivel3 = new List<CategoriaNivel3ServiceModel>();
+        public List<CategoryLevel3ServiceModel> listCategoryLevel3 = new List<CategoryLevel3ServiceModel>();
 
-        public List<CategoriaNivel4ServiceModel> listaCategoriaNivel4 = new List<CategoriaNivel4ServiceModel>();
+        public List<CategoryLevel4ServiceModel> listCategoryLevel4 = new List<CategoryLevel4ServiceModel>();
 
-        public List<ProdutoServiceModel> listaProdutos = new List<ProdutoServiceModel>();
+        public List<ProductServiceModel> listProduct = new List<ProductServiceModel>();
 
-        public List<ProdutoCategoriaServiceModel> listaProdutosCategoria = new List<ProdutoCategoriaServiceModel>();
+        public List<ProductCategoryServiceModel> listProductCategory = new List<ProductCategoryServiceModel>();
 
-        public ClienteServiceModel Cliente = new ClienteServiceModel();
+        public UserServiceModel User = new UserServiceModel();
 
         
-        public int id_Categoria_Nivel1 { get; set; }
-        public int id_Categoria_Nivel2 { get; set; }
-        public int id_Categoria_Nivel3 { get; set; }
-        public int id_Categoria_Nivel4 { get; set; }
+        public int id_Category_Level1 { get; set; }
+        public int id_Category_Level2 { get; set; }
+        public int id_Category_Level3 { get; set; }
+        public int id_Category_Level4 { get; set; }
     }
 }

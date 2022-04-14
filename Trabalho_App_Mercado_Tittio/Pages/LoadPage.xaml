@@ -24,9 +24,9 @@
                 </Grid>
                
                 <Frame Grid.Row="1" Grid.Column="1" CornerRadius="50" BackgroundColor="Black" Padding="0">
-                    <ProgressBar x:Name="Barra" ProgressColor="#FED436" Progress="0" Margin="0"  ScaleY="10" />
+                    <ProgressBar x:Name="Bar" ProgressColor="#FED436" Progress="0" Margin="0"  ScaleY="10" />
                 </Frame>
-                <Label x:Name="lblPorcentagem" Grid.Row="1" Grid.Column="1" Text="0%" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"  TextColor="White"  />
+                <Label x:Name="lblPercentage" Grid.Row="1" Grid.Column="1" Text="0%" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"  TextColor="White"  />
                 <Label Grid.Row="2" Grid.Column="1" Text="Carregando" HorizontalOptions="Center" FontAttributes="Bold"  TextColor="White"  />
             </Grid>
           

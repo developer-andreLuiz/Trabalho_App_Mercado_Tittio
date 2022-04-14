@@ -7,7 +7,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Trabalho_App_Mercado_Tittio.Helpers;
 using Trabalho_App_Mercado_Tittio.Services;
-using Trabalho_App_Mercado_Tittio.Services.ModelsService;
+using Trabalho_App_Mercado_Tittio.Services.Models;
 using Trabalho_App_Mercado_Tittio.Enumerators;
 
 namespace Trabalho_App_Mercado_Tittio.Pages
@@ -15,77 +15,68 @@ namespace Trabalho_App_Mercado_Tittio.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoadPage : ContentPage
     {
-        float porcentagemBarra = 0;
-        float porcentagemAumento = 10;
-        uint tempoAnimacao = 1000;
+        float percentageBar = 0;
+        float percentageIncrease = 10;
+        uint animationTime = 1000;
         
-        ProdutoService produtoService;
-        ClienteService clienteService;
-        ProdutoCategoriaService produtoCategoriaService;
-        CategoriaNivel1Service categoriaNivel1Service;
-        CategoriaNivel2Service categoriaNivel2Service;
-        CategoriaNivel3Service categoriaNivel3Service;
-        CategoriaNivel4Service categoriaNivel4Service;
-       
-        bool internet = false;
-        bool internetVerificada = false;
-        bool produtoVerificado = false;
-        bool clienteVerificado = false;
-        bool produtoCategoriaVerificado = false;
-        bool categoriaNivel1Verificado = false;
-        bool categoriaNivel2Verificado = false;
-        bool categoriaNivel3Verificado = false;
-        bool categoriaNivel4Verificado = false;
-        bool loginVerificado = false;
+        bool internetIsOn = false;
+        bool internetVerified = false;
+        bool productVerified = false;
+        bool clientVerified = false;
+        bool productCategoryVerified = false;
+        bool categoryLevel1Verified = false;
+        bool categoryLevel2Verified = false;
+        bool categoryLevel3Verified = false;
+        bool categoryLevel4Verified = false;
+        bool loginVerified = false;
 
         public LoadPage()
         {
             InitializeComponent();
             Device.StartTimer(TimeSpan.FromMilliseconds(1000), () =>
             {
-                if (internetVerificada == false)
+                if (internetVerified == false)
                 {
-                    Internet();
+                    InternetCheck();
                     return true;
                 }
 
-                if (produtoVerificado == false)
+                if (productVerified == false)
                 {
-                    ProdutoAsync();
+                    ProductAsync();
                     return true;
                 }
-                if (clienteVerificado == false)
+                if (productCategoryVerified == false)
                 {
-                    ClienteAsync();
+                    ProductCategoryAsync();
                     return true;
                 }
-                if (produtoCategoriaVerificado == false)
+                if (categoryLevel1Verified == false)
                 {
-                    ProdutoCategoriaAsync();
+                    CategoryLevel1Async();
                     return true;
                 }
-                if (categoriaNivel1Verificado == false)
+                if (categoryLevel2Verified == false)
                 {
-                    CategoriNivel1Async();
+                    CategoryLevel2Async();
                     return true;
                 }
-                if (categoriaNivel2Verificado == false)
+                if (categoryLevel3Verified == false)
                 {
-                    CategoriNivel2Async();
+                    CategoryLevel3Async();
                     return true;
                 }
-                if (categoriaNivel3Verificado == false)
+                if (categoryLevel4Verified == false)
                 {
-                    CategoriNivel3Async();
+                    CategoryLevel4Async();
                     return true;
                 }
-                if (categoriaNivel4Verificado == false)
+                if (clientVerified == false)
                 {
-                    CategoriNivel4Async();
+                    UserAsync();
                     return true;
                 }
-               
-                if (loginVerificado == false)
+                if (loginVerified == false)
                 {
                     Login();
                     return true;
@@ -94,153 +85,137 @@ namespace Trabalho_App_Mercado_Tittio.Pages
             }
            );
         }
-        void Internet()
+
+        void AnimationBar(string msg,bool finished)
         {
-            internetVerificada = true;
-            internet = InternetHelper.InternetIsOn();
-            porcentagemBarra += porcentagemAumento;
-            lblPorcentagem.Text = porcentagemBarra + "%";
-            lblStatus.Text = "Internet Verificada";
-            Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
-            if (internet==false)
+            if (finished)
             {
-                App.Current.MainPage = new ErroPage(StatusError.Internet,"");
-               
+                percentageBar = 100;
+                lblPercentage.Text = percentageBar + "%";
+                lblStatus.Text = $"Pronto para Iniciar";
+                Bar.ProgressTo(percentageBar / 100, animationTime, Easing.Linear);
             }
-           
-        }
-        async Task ProdutoAsync()
-        {
-            if (internet)
+            else
             {
-                produtoVerificado = true;
-                produtoService = new ProdutoService();
-                GlobalHelper.instancia.listaProdutos = await produtoService.GetAll();
-                porcentagemBarra += porcentagemAumento;
-                lblPorcentagem.Text = porcentagemBarra + "%";
-                lblStatus.Text = $"{GlobalHelper.instancia.listaProdutos.Count} Produto Baixado";
-               Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
+                percentageBar += percentageIncrease;
+                lblPercentage.Text = percentageBar + "%";
+                lblStatus.Text = $"{msg}";
+                Bar.ProgressTo(percentageBar / 100, animationTime, Easing.Linear);
             }
         }
-        async Task ClienteAsync()
+        void InternetCheck()
         {
-            if (internet)
+            internetVerified = true;
+            internetIsOn = DeviceHelper.InternetCheck();
+            AnimationBar("Internet Verificada",false);
+            if (internetIsOn==false)
             {
-                clienteVerificado = true;
-                clienteService = new ClienteService();
-                GlobalHelper.instancia.Cliente = new ClienteServiceModel();
-                ClienteHelper.GetLogin();
-                if (ClienteHelper.Cliente.Id>0)
+                App.Current.MainPage = new ErroPage(StatusError.Internet);
+            }
+        }
+        async Task ProductAsync()
+        {
+            if (internetIsOn)
+            {
+                productVerified = true;
+                ProductService productService = new ProductService();
+                GlobalHelper.instance.listProduct = await productService.GetAll();
+                AnimationBar("Produto", false);
+            }
+        }
+        async Task ProductCategoryAsync()
+        {
+            if (internetIsOn)
+            {
+                productCategoryVerified = true;
+                ProductCategoryService productCategoryService = new ProductCategoryService();
+                GlobalHelper.instance.listProductCategory = await productCategoryService.GetAll();
+                AnimationBar("Produto Categoria", false);
+            }
+        }
+        async Task CategoryLevel1Async()
+        {
+            if (internetIsOn)
+            {
+                categoryLevel1Verified = true;
+                CategoryLevel1Service categoryLevel1Service = new CategoryLevel1Service();
+                GlobalHelper.instance.listCategoryLevel1 = await categoryLevel1Service.GetAll();
+                AnimationBar("Categoria Nivel 1", false);
+            }
+        }
+        async Task CategoryLevel2Async()
+        {
+            if (internetIsOn)
+            {
+                categoryLevel2Verified = true;
+                CategoryLevel2Service categoryLevel2Service = new CategoryLevel2Service();
+                GlobalHelper.instance.listCategoryLevel2 = await categoryLevel2Service.GetAll();
+                AnimationBar("Categoria Nivel 2", false);
+            }
+        }
+        async Task CategoryLevel3Async()
+        {
+            if (internetIsOn)
+            {
+                categoryLevel3Verified = true;
+                CategoryLevel3Service categoryLevel3Service = new CategoryLevel3Service();
+                GlobalHelper.instance.listCategoryLevel3 = await categoryLevel3Service.GetAll();
+                AnimationBar("Categoria Nivel 3", false);
+            }
+        }
+        async Task CategoryLevel4Async()
+        {
+            if (internetIsOn)
+            {
+                categoryLevel4Verified = true;
+                CategoryLevel4Service categoryLevel4Service = new CategoryLevel4Service();
+                GlobalHelper.instance.listCategoryLevel4 = await categoryLevel4Service.GetAll();
+                AnimationBar("Categoria Nivel 4", false);
+            }
+        }
+        async Task UserAsync()
+        {
+            if (internetIsOn)
+            {
+                clientVerified = true;
+                GlobalHelper.instance.User = new UserServiceModel();
+                string value = await DeviceHelper.GetLogin();
+                if (value.Length > 0)
                 {
-                    GlobalHelper.instancia.Cliente = await clienteService.Get(ClienteHelper.Cliente.Id);
+                    UserService clientService = new UserService();
+                    GlobalHelper.instance.User = await clientService.Get(value);
                 }
-                porcentagemBarra += porcentagemAumento;
-                lblPorcentagem.Text = porcentagemBarra + "%";
-                lblStatus.Text = $"Cliente Verificado";
-                Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
-            }
-        }
-        async Task ProdutoCategoriaAsync()
-        {
-            if (internet)
-            {
-                produtoCategoriaVerificado = true;
-                produtoCategoriaService = new ProdutoCategoriaService();
-                GlobalHelper.instancia.listaProdutosCategoria = await produtoCategoriaService.GetAll();
-                porcentagemBarra += porcentagemAumento;
-                lblPorcentagem.Text = porcentagemBarra + "%";
-                lblStatus.Text = $"{GlobalHelper.instancia.listaProdutosCategoria.Count} Produto categoria Baixado";
-                Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
-            }
-        }
-        async Task CategoriNivel1Async()
-        {
-            if (internet)
-            {
-                categoriaNivel1Verificado = true;
-                categoriaNivel1Service = new CategoriaNivel1Service();
-                GlobalHelper.instancia.listaCategoriaNivel1 = await categoriaNivel1Service.GetAll();
-                porcentagemBarra += porcentagemAumento;
-                lblPorcentagem.Text = porcentagemBarra + "%";
-                lblStatus.Text = $"{GlobalHelper.instancia.listaCategoriaNivel1.Count} categorias nivel 1 Baixado";
-                Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
-            }
-        }
-        async Task CategoriNivel2Async()
-        {
-            if (internet)
-            {
-                categoriaNivel2Verificado = true;
-                categoriaNivel2Service = new CategoriaNivel2Service();
-                GlobalHelper.instancia.listaCategoriaNivel2 = await categoriaNivel2Service.GetAll();
-                porcentagemBarra += porcentagemAumento;
-                lblPorcentagem.Text = porcentagemBarra + "%";
-                lblStatus.Text = $"{GlobalHelper.instancia.listaCategoriaNivel2.Count} categorias nivel 2 Baixado";
-                Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
-            }
-        }
-        async Task CategoriNivel3Async()
-        {
-            if (internet)
-            {
-                categoriaNivel3Verificado = true;
-                categoriaNivel3Service = new CategoriaNivel3Service();
-                GlobalHelper.instancia.listaCategoriaNivel3 = await categoriaNivel3Service.GetAll();
-                porcentagemBarra += porcentagemAumento;
-                lblPorcentagem.Text = porcentagemBarra + "%";
-                lblStatus.Text = $"{GlobalHelper.instancia.listaCategoriaNivel3.Count} categorias nivel 3 Baixado";
-                Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
-            }
-        }
-        async Task CategoriNivel4Async()
-        {
-            if (internet)
-            {
-                categoriaNivel4Verificado = true;
-                categoriaNivel4Service = new CategoriaNivel4Service();
-                GlobalHelper.instancia.listaCategoriaNivel4 = await categoriaNivel4Service.GetAll();
-                porcentagemBarra += porcentagemAumento;
-                lblPorcentagem.Text = porcentagemBarra + "%";
-                lblStatus.Text = $"{GlobalHelper.instancia.listaCategoriaNivel4.Count} categorias nivel 4 Baixado";
-                Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
+                AnimationBar("Usuario", false);
             }
         }
         void Login()
         {
-            if (internet)
+            if (internetIsOn)
             {
-                if (produtoVerificado && clienteVerificado && produtoCategoriaVerificado && categoriaNivel1Verificado && categoriaNivel2Verificado && categoriaNivel3Verificado && categoriaNivel4Verificado)
+                if (productVerified && clientVerified && productCategoryVerified && categoryLevel1Verified && categoryLevel2Verified && categoryLevel3Verified && categoryLevel4Verified)
                 {
-                    loginVerificado = true;
-                    DeviceHelper.GetDeviceID();
-                    if (GlobalHelper.instancia.Cliente.id>0)
+                    loginVerified = true;
+                    if (GlobalHelper.instance.User.id>0)
                     {
-                        string nome = GlobalHelper.instancia.Cliente.nome;
+                        string deviceIdLocal = DeviceHelper.GetDeviceID();
 
-                        if (GlobalHelper.instancia.Cliente.habilitado == 0)//erro
+                        if (GlobalHelper.instance.User.habilitado == 0)//user disable 
                         {
-
-                            ClienteHelper.LimparDados();
-                            GlobalHelper.instancia.Cliente = new ClienteServiceModel();
-                            App.Current.MainPage = new ErroPage(StatusError.Desabilitado,nome);
+                            App.Current.MainPage = new ErroPage(StatusError.Disabled);
                             return;
                         }
 
-                        if (GlobalHelper.instancia.Cliente.aparelhoId.Equals(DeviceHelper.DeviceID) == false)//erro
+                        if (GlobalHelper.instance.User.aparelhoId.Equals(deviceIdLocal) == false)//other device
                         {
-                            ClienteHelper.LimparDados();
-                            GlobalHelper.instancia.Cliente = new ClienteServiceModel();
-                            App.Current.MainPage = new ErroPage(StatusError.Desconectado,nome);
+                            DeviceHelper.DataClear();
+                            GlobalHelper.instance.User = new UserServiceModel();
+                            App.Current.MainPage = new ErroPage(StatusError.Disconnect);
                             return;
                         }
                       
                     }
-                    porcentagemBarra =100;
-                    lblPorcentagem.Text = porcentagemBarra + "%";
-                    lblStatus.Text = $"Pronto para Iniciar";
-                    Barra.ProgressTo(porcentagemBarra / 100, tempoAnimacao, Easing.Linear);
-                    
-                    App.Current.MainPage = new NavigationPage(new CategoriaNivel1Page());
+                    AnimationBar("Pronto", true);
+                    App.Current.MainPage = new NavigationPage(new CategoryLevel1Page());
                     return;
                 }
             }

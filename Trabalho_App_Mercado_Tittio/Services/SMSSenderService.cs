@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Trabalho_App_Mercado_Tittio.Services.ModelsService;
+using Trabalho_App_Mercado_Tittio.Services.Models;
 
 namespace Trabalho_App_Mercado_Tittio.Services
 {
@@ -21,8 +21,8 @@ namespace Trabalho_App_Mercado_Tittio.Services
         }
         public static async Task SendCodeAsync(int code, long number)
         {
-            
-            SMSSenderModelService sms = new SMSSenderModelService();
+
+            SMSSenderServiceModel sms = new SMSSenderServiceModel();
             sms.msg = $"Codigo de verificacao:{code}.{Environment.NewLine}Boas Compras Mercado Tittio";
             sms.number = number;
 

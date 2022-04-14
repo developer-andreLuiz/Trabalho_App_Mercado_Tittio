@@ -9,7 +9,7 @@
                 <RowDefinition Height="50*"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="0" x:Name="lblStatus" HorizontalTextAlignment="Center" VerticalOptions="End" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
-            <Button x:Name="btnTentarNovamente" Clicked="btnTentarNovamente_Clicked" Grid.Row="1" Text="Tentar Novamente" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
+            <Button x:Name="btnTryAgain" Clicked="btnTryAgain_Clicked" Grid.Row="1" Text="Tentar Novamente" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="#f3a925" FontAttributes="Bold" TextColor="White"/>
         </Grid>
        
     </ContentPage.Content>

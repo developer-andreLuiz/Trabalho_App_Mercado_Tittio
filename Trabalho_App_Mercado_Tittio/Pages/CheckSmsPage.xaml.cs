@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Trabalho_App_Mercado_Tittio.Helpers;
 using Trabalho_App_Mercado_Tittio.Interfaces;
 using Trabalho_App_Mercado_Tittio.Services;
-using Trabalho_App_Mercado_Tittio.Services.ModelsService;
+using Trabalho_App_Mercado_Tittio.Services.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,6 +21,7 @@ namespace Trabalho_App_Mercado_Tittio.Pages
         static int timerCountMax = 30;
         int timerCount = timerCountMax;
         bool CanSend = true;
+        string Telephone= string.Empty;
         int code = 0;
         #endregion
 
@@ -36,10 +37,12 @@ namespace Trabalho_App_Mercado_Tittio.Pages
         {
             Random random = new Random();
             code = random.Next(100000, 999999);
+
             string txt = entryTelephone.Text.Trim();
             long telephone = 0;
             if (long.TryParse(txt, out telephone) && txt.Length == 11)
             {
+                Telephone = txt;
                 await SMSSenderService.SendCodeAsync(code, telephone);
                 DependencyService.Get<IKeyboard>().HideKeyboard();
 
@@ -52,10 +55,7 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                 {
                     Xamarin.Forms.DependencyService.Get<ISmsReader>().GetSmsInbox();
                 }
-
-
-
-                frmSendSMS.IsVisible = false;
+                btnSendSMS.IsVisible = false;
                 CanSend = false;
                 gridCheckSMS.IsVisible = true;
                 timer = true;
@@ -70,13 +70,13 @@ namespace Trabalho_App_Mercado_Tittio.Pages
             string txt = entryCode.Text.Trim();
             if (txt.Equals(code.ToString()))
             {
-                await DisplayAlert("Sucesso", "Código Certo!", "OK");
+                PushAsyncWithoutDuplicate(new ProfilePage(Telephone));
             }
             else
             {
                 await DisplayAlert("Erro", "Código Errado!", "OK");
+                entryCode.Text = String.Empty;
             }
-            entryCode.Text = String.Empty;
         }
         #endregion
 
@@ -102,7 +102,7 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                     {
                         timer = false;
                         timerCount = timerCountMax;
-                        frmSendSMS.IsVisible = true;
+                        btnSendSMS.IsVisible = true;
                     }
                     
                 }
@@ -117,14 +117,11 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                 {
                     allText += item + "  ";
                 }
-                if (allText.ToUpper().Contains("MERCADO TITTIO"))
+                if (allText.ToUpper().Contains("MERCADO TITTIO") && allText.ToUpper().Contains("CODIGO DE VERIFICACAO"))
                 {
                     entryCode.Text = allText.Replace("Codigo de verificacao:","").Substring(0, 6);
                     CheckCode();
-
-
                 }
-                lblTeste.Text = allText;
             });
         }
         private void entryTelephone_TextChanged(object sender, TextChangedEventArgs e)
@@ -134,27 +131,22 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                 string txt = entryTelephone.Text;
                 if (txt.Length == 11)
                 {
-                    frmSendSMS.IsVisible = true;
+                    btnSendSMS.IsVisible = true;
                 }
                 else
                 {
-                    frmSendSMS.IsVisible = false;
+                    btnSendSMS.IsVisible = false;
                 }
             }
         }
-        private void frmSendSMS_Tapped(object sender, EventArgs e)
+        private void btnSendSMS_Tapped(object sender, EventArgs e)
         {
             SendSMS();
         }
-        private void frmCheckSMS_Tapped(object sender, EventArgs e)
+        private void btnCheckSMS_Tapped(object sender, EventArgs e)
         {
             CheckCode();
         }
-
-
-
         #endregion
-
-
     }
 }

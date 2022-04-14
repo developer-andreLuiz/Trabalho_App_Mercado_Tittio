@@ -6,6 +6,6 @@ namespace Trabalho_App_Mercado_Tittio.Enumerators
 {
     public enum StatusError
     {
-        Internet,Desabilitado,Desconectado
+        Internet, Disabled, Disconnect
     }
 }

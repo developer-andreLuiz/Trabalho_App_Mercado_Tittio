@@ -34,14 +34,16 @@
                     </Grid.RowDefinitions>
 
                     <Label Grid.Row="0" Text="Digite seu Telefone" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"/>
+                   
                     <!--Entry Número-->
                     <Frame Grid.Row="1" CornerRadius="10" VerticalOptions="Center" Margin="0" Padding="20,0,20,0" BorderColor="Black">
                         <Entry x:Name="entryTelephone" Placeholder="(00)00000-0000" MaxLength="11" HorizontalTextAlignment="Center" Keyboard="Numeric" TextChanged="entryTelephone_TextChanged"/>
                     </Frame>
+                    
                     <!--Botão Enviar SMS-->
-                    <Frame x:Name="frmSendSMS" Grid.Row="3" BackgroundColor="#f3a925" CornerRadius="10" VerticalOptions="Center" BorderColor="Black" Padding="50,0,50,0" IsVisible="false">
+                    <Frame x:Name="btnSendSMS" Grid.Row="3" BackgroundColor="#f3a925" CornerRadius="10" VerticalOptions="Center" BorderColor="Black" Padding="50,0,50,0" IsVisible="false">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="frmSendSMS_Tapped"/>
+                            <TapGestureRecognizer Tapped="btnSendSMS_Tapped"/>
                         </Frame.GestureRecognizers>
                         <Grid BackgroundColor="Transparent">
                             <Grid.ColumnDefinitions>
@@ -67,15 +69,18 @@
                     </Grid.RowDefinitions>
 
                     <Label x:Name="lblTime" Grid.Row="0" Background="white" TextColor="Black" Text="00:00" FontSize="Header" HorizontalOptions="Center"/>
-                    <Label x:Name="lblTeste" Grid.Row="1" Text="Digite o Código" TextColor="Black" VerticalOptions="End" HorizontalOptions="Center"/>
+                    
+                    <Label Grid.Row="1" Text="Digite o Código" TextColor="Black" VerticalOptions="End" HorizontalOptions="Center"/>
+                   
                     <!--Entry Codigo-->
                     <Frame Grid.Row="2" CornerRadius="10" VerticalOptions="Center" Margin="0" Padding="40,0,40,0" BorderColor="Black">
                         <Entry x:Name="entryCode" Placeholder="xxxxxxx" MaxLength="6" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
                     </Frame>
+                   
                     <!--Botão Verifica SMS-->
-                    <Frame x:Name="frmCheckSMS" Grid.Row="4" BackgroundColor="#f3a925" CornerRadius="10" VerticalOptions="Center" BorderColor="Black" Padding="50,0,50,0">
+                    <Frame x:Name="btnCheckSMS" Grid.Row="4" BackgroundColor="#f3a925" CornerRadius="10" VerticalOptions="Center" BorderColor="Black" Padding="50,0,50,0">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="frmCheckSMS_Tapped"/>
+                            <TapGestureRecognizer Tapped="btnCheckSMS_Tapped"/>
                         </Frame.GestureRecognizers>
                         <Grid BackgroundColor="Transparent">
                             <Grid.ColumnDefinitions>

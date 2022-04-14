@@ -3,8 +3,12 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Trabalho_App_Mercado_Tittio.Android.dll" comes first in this list. */
 		"Trabalho_App_Mercado_Tittio.Android.dll",
+		"BouncyCastle.Crypto.dll",
 		"FormsViewGroup.dll",
+		"GoogleApi.dll",
+		"Microsoft.WindowsAzure.Storage.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.Media.dll",
 		"Trabalho_App_Mercado_Tittio.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
@@ -60,6 +64,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.AndroidX.ViewPager2.dll",
 		"Xamarin.Essentials.dll",
 		"Xamarin.Forms.Core.dll",
+		"Xamarin.Forms.OpenWhatsApp.dll",
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
