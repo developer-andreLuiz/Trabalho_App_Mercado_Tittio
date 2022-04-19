@@ -122,9 +122,9 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                         PhotoSize = PhotoSize.Small,
                     };
                     var selectedImageFile = await CrossMedia.Current.PickPhotoAsync(mediaOptions);
-                    if (imgProfile == null)
+                    if (selectedImageFile == null)
                     {
-                        await DisplayAlert("Erro", "Não foi possível obter a imagem, tente novamente.", "Ok");
+                        imgProfile.Source = "profile";
                         return;
                     }
 
@@ -147,9 +147,9 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                         AllowCropping = true
                     };
                     var selectedImageFile = await CrossMedia.Current.TakePhotoAsync(mediaOptions);
-                    if (imgProfile == null)
+                    if (selectedImageFile == null)
                     {
-                        await DisplayAlert("Erro", "Não foi possível obter a imagem, tente novamente.", "Ok");
+                        imgProfile.Source = "profile";
                         return;
                     }
                     imgProfile.Source = ImageSource.FromStream(() => selectedImageFile.GetStream());
@@ -160,11 +160,10 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                 }
             }
             catch { }
-
         }
         private async void frmSave_Tapped(object sender, EventArgs e)
         {
-            if (entryName.Text.Length > 0)
+            if (entryName.Text.Length > 0 && lblTelephone.Text.Length>0)
             {
                 UserService userService = new UserService();
                 UserServiceModel userServiceModel = new UserServiceModel();
