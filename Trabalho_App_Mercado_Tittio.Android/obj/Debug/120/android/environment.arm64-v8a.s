@@ -26,10 +26,12 @@ application_config:
 	.byte	0
 	/* have_runtime_config_blob */
 	.byte	0
+	/* have_assembly_store */
+	.byte	0
 	/* bound_exception_type */
 	.byte	1
 	/* package_naming_policy */
-	.zero	3
+	.zero	2
 	.word	3
 	/* environment_variable_count */
 	.word	12
@@ -39,9 +41,13 @@ application_config:
 	.word	115
 	/* bundled_assembly_name_width */
 	.word	63
+	/* number_of_assembly_store_files */
+	.word	2
+	/* mono_components_mask */
+	.word	0
 	/* android_package_name */
 	.xword	.L.env.str.1
-	.size	application_config, 40
+	.size	application_config, 48
 	.section	.rodata.env.str.2,"aMS",@progbits,1
 	.type	.L.env.str.2, @object
 .L.env.str.2:
@@ -79,7 +85,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"287b7013-2818-4e5d-9fe3-8fe3ca0c5e4e"
+	.asciz	"a97f99a3-b369-4ab6-9cda-802325b63028"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object
@@ -135,6 +141,7 @@ app_environment_variables:
 	.global	app_system_properties
 app_system_properties:
 	.size	app_system_properties, 0
+
 	/* Bundled assembly name buffers, all 63 bytes long */
 	.section	.bss.bundled_assembly_names,"aw",@nobits
 .L.env.buf.1:
@@ -367,6 +374,7 @@ app_system_properties:
 	.zero	63
 .L.env.buf.115:
 	.zero	63
+
 	/* Bundled assemblies data */
 	.section	.data.bundled_assemblies,"aw",@progbits
 	.type	bundled_assemblies, @object
@@ -2099,3 +2107,18 @@ bundled_assemblies:
 	.xword	.L.env.buf.115
 
 	.size	bundled_assemblies, 4600
+
+
+	/* Assembly store individual assembly data */
+	.section	.data.assembly_store_bundled_assemblies,"aw",@progbits
+	.type	assembly_store_bundled_assemblies, @object
+	.p2align	3
+	.global	assembly_store_bundled_assemblies
+assembly_store_bundled_assemblies:
+
+	/* Assembly store data */
+	.section	.data.assembly_stores,"aw",@progbits
+	.type	assembly_stores, @object
+	.p2align	3
+	.global	assembly_stores
+assembly_stores:

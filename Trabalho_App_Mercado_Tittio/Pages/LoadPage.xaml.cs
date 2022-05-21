@@ -81,6 +81,7 @@ namespace Trabalho_App_Mercado_Tittio.Pages
                     Login();
                     return true;
                 }
+
                 return true;
             }
            );

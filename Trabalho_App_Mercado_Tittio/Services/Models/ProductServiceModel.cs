@@ -11,9 +11,9 @@ namespace Trabalho_App_Mercado_Tittio.Services.Models
         public string pronuncia { get; set; }
         public string img { get; set; }
         public string codigoLoja { get; set; }
-        public double custoUnitario { get; set; }
-        public double valorVenda { get; set; }
-        public double valorPromocao { get; set; }
+        public decimal custoUnitario { get; set; }
+        public decimal valorVenda { get; set; }
+        public decimal valorPromocao { get; set; }
         public string gramatura { get; set; }
         public string embalagem { get; set; }
         public string peso { get; set; }
