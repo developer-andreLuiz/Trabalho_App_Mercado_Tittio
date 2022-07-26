@@ -747,11 +747,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
+      "projectUniqueName": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
       "projectName": "Trabalho_App_Mercado_Tittio",
-      "projectPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
+      "projectPath": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
       "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\obj\\",
+      "outputPath": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

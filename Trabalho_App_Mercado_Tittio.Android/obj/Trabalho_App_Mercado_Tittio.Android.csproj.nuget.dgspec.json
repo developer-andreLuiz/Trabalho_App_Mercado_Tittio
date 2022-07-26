@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj": {}
+    "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj": {}
   },
   "projects": {
-    "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj": {
+    "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj",
+        "projectUniqueName": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj",
         "projectName": "Trabalho_App_Mercado_Tittio.Android",
-        "projectPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj",
+        "projectPath": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj",
         "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.Android\\obj\\",
+        "outputPath": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj": {
-                "projectPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj"
+              "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj": {
+                "projectPath": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj": {
+    "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
+        "projectUniqueName": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
         "projectName": "Trabalho_App_Mercado_Tittio",
-        "projectPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
+        "projectPath": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
         "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\obj\\",
+        "outputPath": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

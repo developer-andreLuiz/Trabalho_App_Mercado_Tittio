@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.Mercado_Tittio.App.Venda" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="2.0" package="com.MercadoTittio_App_LojaOnline" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31" />
 	<application android:label="Mercado Tittio" android:theme="@style/MainTheme" android:icon="@mipmap/icon_">
 		<provider android:name="androidx.core.content.FileProvider" android:authorities="com.mercado_tittio.appvenda.fileprovider" android:exported="false" android:grantUriPermissions="true">

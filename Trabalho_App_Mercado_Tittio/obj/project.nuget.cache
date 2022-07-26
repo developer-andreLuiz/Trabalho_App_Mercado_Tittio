@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hUn/fstbhC3uNNSG+gFIpTpkV9I9ws5NOG22InG6ay3QlUWW5LwHK5dboHeQF5ndAyOFzsoei/wqYmqsTJan2Q==",
+  "dgSpecHash": "YCW+RX3A6Zpn07fY6+sIqA3tGTvWiTnX4RC+W8g0+hIrXQ7vYxsiDHMxhbODtUmjP0R12ncu5g42Y0BxKtEpcA==",
   "success": true,
-  "projectFilePath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
+  "projectFilePath": "D:\\Git\\MercadoTittio_App_LojaOnline\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andre\\.nuget\\packages\\googleapi\\4.0.7\\googleapi.4.0.7.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
