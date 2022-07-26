@@ -6593,7 +6593,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Developer\\.nuget\\packages\\": {},
+    "C:\\Users\\Andre\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -6602,7 +6602,7 @@
       "projectUniqueName": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj",
       "projectName": "Trabalho_App_Mercado_Tittio.Android",
       "projectPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.Android\\Trabalho_App_Mercado_Tittio.Android.csproj",
-      "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
       "outputPath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
@@ -6610,7 +6610,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

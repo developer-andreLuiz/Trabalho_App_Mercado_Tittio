@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.mercado_tittio.appvenda" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.Mercado_Tittio.App.Venda" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31" />
 	<application android:label="Mercado Tittio" android:theme="@style/MainTheme" android:icon="@mipmap/icon_">
 		<provider android:name="androidx.core.content.FileProvider" android:authorities="com.mercado_tittio.appvenda.fileprovider" android:exported="false" android:grantUriPermissions="true">
 			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
@@ -13,7 +13,6 @@
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
 	<uses-feature android:name="android.hardware.location" android:required="false" />
 	<uses-feature android:name="android.hardware.location.gps" android:required="false" />
 	<uses-feature android:name="android.hardware.location.network" android:required="false" />

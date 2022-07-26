@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "RV7ajWSRpVyJcX0xePiDC6P1v4AfAnOCKGpMDjw0qkDhrqtGV+aEm2wPrDWbHbNZ+L7TyGb5fgERcKMLu+kFFA==",
+  "dgSpecHash": "hUn/fstbhC3uNNSG+gFIpTpkV9I9ws5NOG22InG6ay3QlUWW5LwHK5dboHeQF5ndAyOFzsoei/wqYmqsTJan2Q==",
   "success": true,
   "projectFilePath": "D:\\Git\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio\\Trabalho_App_Mercado_Tittio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Developer\\.nuget\\packages\\googleapi\\4.0.7\\googleapi.4.0.7.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\portable.bouncycastle\\1.8.10\\portable.bouncycastle.1.8.10.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\windowsazure.storage\\9.3.3\\windowsazure.storage.9.3.3.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
-    "C:\\Users\\Developer\\.nuget\\packages\\xamarin.forms.openwhatsapp\\1.0.1\\xamarin.forms.openwhatsapp.1.0.1.nupkg.sha512"
+    "C:\\Users\\Andre\\.nuget\\packages\\googleapi\\4.0.7\\googleapi.4.0.7.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\portable.bouncycastle\\1.8.10\\portable.bouncycastle.1.8.10.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\windowsazure.storage\\9.3.3\\windowsazure.storage.9.3.3.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms.openwhatsapp\\1.0.1\\xamarin.forms.openwhatsapp.1.0.1.nupkg.sha512"
   ],
   "logs": []
 }
